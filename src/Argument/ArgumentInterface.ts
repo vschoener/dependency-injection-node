@@ -9,4 +9,4 @@ export interface ArgumentInterface<V = any> {
   getValue(): V;
 }
 
-export type Arguments = Array<ArgumentInterface>;
+export type Arguments = ArgumentInterface[];
