@@ -32,3 +32,6 @@ jobs:
 
       # run tests!
       - run: npm run test
+
+      - codecov/upload:
+          file: {{ coverage_report_filepath }}

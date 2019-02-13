@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --coverage",
     "prettier": "prettier --write '{src,test,docs}/**/*.{ts,yml,yaml,json,md}'",
-    "linter": "tslint --project . -c tslint.json"
+    "linter": "tslint --project . -c tslint.json",
+    "coverall": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.0",
+    "coveralls": "^3.0.2",
     "jest": "^24.1.0",
     "prettier": "1.16.4",
     "ts-jest": "^23.10.5",
@@ -41,7 +43,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{ts}"
+      "src/**/*.ts"
     ],
     "moduleFileExtensions": [
       "ts",
