@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/vschoener/dependency-injection-node.svg?style=svg)](https://circleci.com/gh/vschoener/dependency-injection-node)
+[![CircleCI](https://circleci.com/gh/vschoener/dependency-injection-node.svg?style=svg)](https://circleci.com/gh/vschoener/dependency-injection-node) [![Coverage Status](https://coveralls.io/repos/github/organization/project/badge.svg?branch=master)](https://coveralls.io/github/vschoener/dependency-injection-node?branch=master)
 
 # TypeScript Dependency Injection
 
