@@ -1,0 +1,75 @@
+{
+  "name": "dependency-injection-node",
+  "version": "1.0.0",
+  "description": "Dependency Injection pattern with node",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prettier": "prettier --write '{src,test,docs}/**/*.{ts,yml,yaml,json,md}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vschoener/dependency-injection-node.git"
+  },
+  "keywords": [
+    "dependency",
+    "injection",
+    "pattern",
+    "object",
+    "node"
+  ],
+  "author": "Vincent Schoener",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vschoener/dependency-injection-node/issues"
+  },
+  "homepage": "https://github.com/vschoener/dependency-injection-node#readme",
+  "dependencies": {
+    "@types/node": "^10.12.24",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "jest": "^24.1.0",
+    "prettier": "1.16.4",
+    "ts-jest": "^23.10.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts}"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "resetModules": true,
+    "testMatch": [
+      "<rootDir>/test/**/*.ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/setupJest.ts"
+    ]
+  },
+  "prettier": {
+    "useTabs": false,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "parser": "typescript",
+    "printWidth": 80
+  }
+}
