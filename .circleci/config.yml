@@ -13,7 +13,7 @@ jobs:
       - checkout
 
       - run:
-          name: update-npm
+          name: update_npm_command
           command: 'sudo npm install -g npm@latest'
 
       # Download and cache dependencies
@@ -23,7 +23,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run:
+          name: npm_install
+          command: 'npm install'
 
       - save_cache:
           paths:
@@ -31,7 +33,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm run test
-
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
+      - run:
+          name: run_test
+          command: 'npm run test'
