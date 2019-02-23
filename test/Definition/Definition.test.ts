@@ -88,7 +88,6 @@ describe('Definition', () => {
       error = err;
     }
 
-    console.log(error);
     expect(error.name).toEqual('PrototypeException');
   });
 });

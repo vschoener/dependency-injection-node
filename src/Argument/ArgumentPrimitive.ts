@@ -1,7 +1,9 @@
 import { AbstractArgument } from './AbstractArgument';
 import { ArgumentType } from './ArgumentInterface';
 
-export class ArgumentPrimitive<V = any> extends AbstractArgument<V> {
+export type Primitive = string | number | object | boolean;
+
+export class ArgumentPrimitive<V = Primitive> extends AbstractArgument<V> {
   constructor(value: V) {
     super(value, ArgumentType.PRIMITIVE);
   }
