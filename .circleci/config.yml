@@ -9,12 +9,12 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:10.0
 
+    working_directory: ~/repo
+
     steps:
       - checkout
 
-      - run:
-          name: update_npm_command
-          command: 'sudo npm install -g npm@latest'
+      - run: sudo npm install -g npm@latest
 
       # Download and cache dependencies
       - restore_cache:
@@ -23,9 +23,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run:
-          name: npm_install
-          command: 'npm install'
+      - run: npm install
 
       - save_cache:
           paths:
@@ -33,6 +31,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run:
-          name: run_test
-          command: 'npm run test'
+      - run: npm run test
+
+      - run: npm run coverall
